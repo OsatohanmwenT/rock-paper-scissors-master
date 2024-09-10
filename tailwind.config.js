@@ -22,8 +22,8 @@ export default {
         "scissors-2": "hsl(40, 84%, 53%)",
       },
       backgroundImage: {
-        "pentagon": "url('./src/assets/images/bg-pentagon.svg')",
-        "triangle": "url('./src/assets/images/bg-triangle.svg')"
+        "pentagon": "url('./assets/images/bg-pentagon.svg')",
+        "triangle": "url('./assets/images/bg-triangle.svg')"
       }
     },
   },
