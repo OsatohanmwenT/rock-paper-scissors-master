@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient( to bottom, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    background-repeat: no-repeat;
+    overflow: clip;
+}
+
+@layer components{
+    .paper-shadow{
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 5px 0px 1px hsl(230deg 89% 62% / 80%);
+    }
+    .rock-shadow{
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 5px 0px 1px hsl(349deg 71% 52% / 80%);
+    }
+    .scissors-shadow{
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 5px 0px 1px hsl(39deg 89% 49% / 80%);
+    }
+    .spock-shadow{
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 5px 0px 1px hsl(189deg 59% 53% / 80%);
+    }
+    .lizard-shadow{
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 5px 0px 1px hsl(261 73% 60% / 80%);
+    }
+}
+
+.slide-in{
+    transform: translateX(100vw);
+    animation: show 1000ms ease forwards;
+    animation-delay: 300ms;
+}
+
+@keyframes show{
+    to{
+        transform: translate(0);
+    }
+}
+
+.anim{
+    translate: -50vw;
+    rotate: 0deg;
+    animation: anim 1000ms ease forwards;
+    animation-delay: 300ms;
+    opacity: 0;
+}
+
+@keyframes anim{
+    to{
+        rotate: 360deg;
+        translate: 0;
+        opacity: 1;
+    }
+}
