@@ -47,7 +47,7 @@ export default function Layout() {
         <Dialog showRules={showRules} setShowRules={setShowRules} closeIcon={closeIcon} rules={rules}  />
         <Outlet context={{ playGame }} />
       </div>
-      <div className={`bg-white left-[20px] rounded-lg bottom-[80px] transition-all duration-300 ${showLevel ? "-translate-x-[50vw] opacity-0" : "translate-x-0 opacity-1"} absolute`}>
+      <div className={`bg-white left-[20px] rounded-lg bottom-[80px] transition-all duration-300 ${showLevel ? "translate-x-0 opacity-1" : "-translate-x-[50vw] opacity-0"} absolute`}>
         <Link to="/">
           <button onClick={() =>setLevel("easy")} className='text-Dark-text hover:bg-Dark-text transition-all rounded-s-md hover:text-white p-2 sm:p-4 font-semibold text-md sm:text-xl '>EASY</button>
         </Link>
